@@ -52,7 +52,7 @@ function loginForm(){
     <header class="main-head">
         <nav>
           <ul>
-            <li><a href="/demo/mainpage.html">Home</a></li>
+            <li><a href="/demo/index.html">Home</a></li>
             <li><a class="active" href="./">Chat</a></li>
           </ul>
         </nav>
