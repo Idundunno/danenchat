@@ -49,14 +49,27 @@ function loginForm(){
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     </head>
     <body>
-    <header class="main-head">
-        <nav>
+    <script>function menuOnClick() {
+    document.getElementById("menu-bar").classList.toggle("change");
+    document.getElementById("nav").classList.toggle("change");
+    document.getElementById("menu-bg2").classList.toggle("change-bg");
+  }</script>
+      <div id="menu">
+        <div id="menu-bar" onclick="menuOnClick()">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+        </div>
+        <nav class="nav" id="nav">
           <ul>
             <li><a href="/demo/index.html">Home</a></li>
             <li><a class="active" href="./">Chat</a></li>
           </ul>
         </nav>
-      </header>
+      </div>
+      <div class="menu-bg2" id="menu-bg2"></div>
+      <div class="text-box">
+            
     <section>
     <?php
     if(!isset($_SESSION['name'])){
@@ -65,7 +78,7 @@ function loginForm(){
     else {
     ?>
         <div id="wrapper">
-            <div id="menu">
+            <div id="menus">
                 <p class="welcome">hi dana, here below you can find the chat</p>
                 <p class="logout"><a id="exit" href="#">Go back</a></p>
             </div>
